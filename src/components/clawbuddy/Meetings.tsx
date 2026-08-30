@@ -117,10 +117,12 @@ export function Meetings() {
   const monthData = useMemo(() => {
     const map = new Map<string, number>();
     for (const m of meetings) {
-      const key = format(parseISO(m.date), "MMM yy");
+      const key = format(parseISO(m.date), "yyyy-MM");
       map.set(key, (map.get(key) ?? 0) + 1);
     }
-    return Array.from(map, ([month, count]) => ({ month, count }));
+    return Array.from(map, ([key, count]) => ({ key, month: format(parseISO(`${key}-01`), "MMM yyyy"), count })).sort((a, b) =>
+      a.key.localeCompare(b.key),
+    );
   }, []);
 
   const filtered = useMemo(() => {
@@ -215,7 +217,7 @@ export function Meetings() {
                     fontSize: 12,
                   }}
                 />
-                <Bar dataKey="count" fill="var(--primary)" radius={[6, 6, 0, 0]} />
+                <Bar dataKey="count" fill="var(--primary)" radius={[6, 6, 0, 0]} maxBarSize={72} />
               </BarChart>
             </ResponsiveContainer>
           </div>

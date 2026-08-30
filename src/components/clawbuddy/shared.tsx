@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import type { AgentStatus } from "@/lib/clawbuddy-data";
 
@@ -26,11 +26,8 @@ export function StatusDot({ status, className }: { status: AgentStatus; classNam
 
 export function CountUp({ value, decimals = 0, suffix = "" }: { value: number; decimals?: number; suffix?: string }) {
   const [display, setDisplay] = useState(0);
-  const started = useRef(false);
 
   useEffect(() => {
-    if (started.current) return;
-    started.current = true;
     const duration = 900;
     const start = performance.now();
     let frame = 0;

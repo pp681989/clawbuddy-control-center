@@ -327,7 +327,7 @@ export const meetings: Meeting[] = [
   {
     id: "m6",
     title: "All-Hands — August Business Update",
-    date: "2026-08-14T15:00:00Z",
+    date: "2026-07-14T15:00:00Z",
     duration_minutes: 75,
     duration_display: "1h 15m",
     attendees: ["Alice", "Bob", "Charlie", "Dana", "Eli", "Fern", "Gus", "Priya"],
@@ -378,7 +378,7 @@ export const meetings: Meeting[] = [
   {
     id: "m9",
     title: "Q4 Roadmap Planning",
-    date: "2026-08-12T13:30:00Z",
+    date: "2026-06-12T13:30:00Z",
     duration_minutes: 90,
     duration_display: "1h 30m",
     attendees: ["Alice", "Charlie", "Dana", "Eli", "Priya"],
@@ -399,7 +399,7 @@ export const meetings: Meeting[] = [
   {
     id: "m10",
     title: "Team Sync — Agent Reliability",
-    date: "2026-08-07T10:30:00Z",
+    date: "2026-07-07T10:30:00Z",
     duration_minutes: 40,
     duration_display: "40m",
     attendees: ["Bob", "Fern", "Gus"],
