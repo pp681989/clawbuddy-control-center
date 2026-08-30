@@ -91,7 +91,7 @@ export type Task = {
   title: string;
   agentId: string;
   column: ColumnId;
-  progress?: number;
+  progress?: number | undefined;
   priority: Priority;
 };
 

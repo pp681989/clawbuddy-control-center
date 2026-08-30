@@ -5,7 +5,7 @@ import { StatusDot } from "./shared";
 import { Button } from "@/components/ui/button";
 
 export function Header() {
-  const lead = agents[0];
+  const lead = agents[0]!;
 
   return (
     <motion.header

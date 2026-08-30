@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 export function Council() {
-  const [open, setOpen] = useState<string | null>(councilSessions[0].id);
+  const [open, setOpen] = useState<string | null>(councilSessions[0]!.id);
 
   return (
     <div className="space-y-4">
